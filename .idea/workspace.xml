@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="77d5573a-f424-455d-b6f3-0df2ca884f0d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/africa/trueCaller/data/models/Contact.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/africa/trueCaller/data/models/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/africa/trueCaller/data/repositories/ContactRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/africa/trueCaller/data/repositories/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/africa/trueCaller/data/repositories/iContactRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/africa/trueCaller/data/repositories/iUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/africa/trueCaller/dtos/requests/RegisterRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/africa/trueCaller/dtos/responses/RegisterResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/africa/trueCaller/exceptions/UserExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/africa/trueCaller/services/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/africa/trueCaller/services/iUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/africa/trueCaller/data/repositories/ContactRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/africa/trueCaller/data/repositories/UserRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/africa/trueCaller/services/UserServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/true_caller.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2C7KbHRO2zVlXwUt8h2ZDL4djxM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="africa.trueCaller.exceptions" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="africa.trueCaller.services" />
+      <recent name="africa.trueCaller.data.repositories" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.UserServiceTest.registerMoreThanOne_getSizeTest">
+    <configuration name="UserRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="true_caller" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="africa.trueCaller.data.repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="africa.trueCaller.data.repositories" />
+      <option name="MAIN_CLASS_NAME" value="africa.trueCaller.data.repositories.UserRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserRepositoryTest.findAllUsersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="true_caller" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="africa.trueCaller.data.repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="africa.trueCaller.data.repositories" />
+      <option name="MAIN_CLASS_NAME" value="africa.trueCaller.data.repositories.UserRepositoryTest" />
+      <option name="METHOD_NAME" value="findAllUsersTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserRepositoryTest.saveUser_removeUserByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="true_caller" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="africa.trueCaller.data.repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="africa.trueCaller.data.repositories" />
+      <option name="MAIN_CLASS_NAME" value="africa.trueCaller.data.repositories.UserRepositoryTest" />
+      <option name="METHOD_NAME" value="saveUser_removeUserByIdTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="true_caller" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="africa.trueCaller.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="africa.trueCaller.services" />
+      <option name="MAIN_CLASS_NAME" value="africa.trueCaller.services.UserServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.registerMoreThanOne_getSizeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="true_caller" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="africa.trueCaller.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="africa.trueCaller.services" />
+      <option name="MAIN_CLASS_NAME" value="africa.trueCaller.services.UserServiceTest" />
+      <option name="METHOD_NAME" value="registerMoreThanOne_getSizeTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserServiceTest.registerMoreThanOne_getSizeTest" />
+        <item itemvalue="JUnit.UserRepositoryTest.findAllUsersTest" />
+        <item itemvalue="JUnit.UserRepositoryTest" />
+        <item itemvalue="JUnit.UserRepositoryTest.saveUser_removeUserByIdTest" />
+        <item itemvalue="JUnit.UserServiceTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="77d5573a-f424-455d-b6f3-0df2ca884f0d" name="Changes" comment="" />
+      <created>1658148253573</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1658148253573</updated>
+      <workItem from="1658148256084" duration="127000" />
+      <workItem from="1658148439186" duration="12602000" />
+      <workItem from="1658182895959" duration="6565000" />
+      <workItem from="1658213776230" duration="650000" />
+      <workItem from="1658259162146" duration="5411000" />
+      <workItem from="1658323510462" duration="1360000" />
+      <workItem from="1658325169176" duration="8142000" />
+      <workItem from="1658353850257" duration="3527000" />
+      <workItem from="1658600326582" duration="5079000" />
+      <workItem from="1658619933925" duration="594000" />
+      <workItem from="1658698437882" duration="867000" />
+      <workItem from="1658833958365" duration="675000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
