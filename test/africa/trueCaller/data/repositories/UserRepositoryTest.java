@@ -23,7 +23,7 @@ public class UserRepositoryTest {
 
     @Test
     public void saveUser_countTest(){
-        user.setName("Alex");
+        user.setFirstName("Alex");
         user.setPassword("ios");
         user.setPhoneNumber("121212135");
         user.setEmail("alex@gmail.com");
@@ -33,7 +33,7 @@ public class UserRepositoryTest {
 
     @Test
     public void saveUser_findByIdTest(){
-        user.setName("Alex");
+        user.setFirstName("Alex");
         user.setPassword("ios");
         user.setPhoneNumber("121212135");
         user.setEmail("alex@gmail.com");
@@ -41,12 +41,12 @@ public class UserRepositoryTest {
         assertEquals(1,userRepository.count());
 
         User savedUser=userRepository.findByEmail("alex@gmail.com");
-        assertEquals("Alex",savedUser.getName());
+        assertEquals("Alex",savedUser.getFirstName());
     }
 
     @Test
     public void saveUser_removeUserTest(){
-        user.setName("Alex");
+        user.setFirstName("Alex");
         user.setPassword("ios");
         user.setPhoneNumber("121212135");
         user.setEmail("alex@gmail.com");
@@ -58,7 +58,7 @@ public class UserRepositoryTest {
 
     @Test
     public void saveUser_removeUserByIdTest(){
-        user.setName("Alex");
+        user.setFirstName("Alex");
         user.setPassword("ios");
         user.setPhoneNumber("121212135");
         user.setEmail("alex@gmail.com");
@@ -69,13 +69,13 @@ public class UserRepositoryTest {
 
     @Test
     public void updateUser_findByIdTest(){
-        user.setName("Alex");
+        user.setFirstName("Alex");
         user.setPassword("ios");
         user.setPhoneNumber("121212135");
         user.setEmail("alex@gmail.com");
         userRepository.save(user);
 
-        user.setName("Collins");
+        user.setFirstName("Collins");
         user.setPassword("mks");
         user.setPhoneNumber("122343135");
         user.setEmail("alex@gmail.com");
@@ -83,29 +83,35 @@ public class UserRepositoryTest {
         assertEquals(1,userRepository.count());
 
         User savedUser=userRepository.findByEmail("alex@gmail.com");
-        assertEquals("Collins",savedUser.getName());
+        assertEquals("Collins",savedUser.getFirstName());
     }
 
     @Test
     public void findAllUsersTest() {
-        user.setName("Alex");
+        user.setFirstName("Alex");
+        user.setLastName("Sheex");
         user.setPassword("ios");
         user.setPhoneNumber("121212135");
         user.setEmail("alex@gmail.com");
         userRepository.save(user);
-        user1.setName("Yeye");
+        user1.setFirstName("Yeye");
+        user1.setLastName("Laun");
         user1.setPassword("mks");
         user1.setPhoneNumber("122343135");
         user1.setEmail("yeye@gmail.com");
         userRepository.save(user1);
         List<User> savedUser=userRepository.findAll();
         assertEquals("""
-                [Name: Alex
+                [First Name: Alex
+                Last Name: Sheex
                 Phone Number: 121212135
                 Email: alex@gmail.com
-                , Name: Yeye
+                , First Name: Yeye
+                Last Name: Laun
                 Phone Number: 122343135
                 Email: yeye@gmail.com
                 ]""",savedUser.toString());
     }
+
+
 }

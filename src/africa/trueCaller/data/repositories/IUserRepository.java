@@ -11,5 +11,5 @@ public interface IUserRepository {
     List <User> findAll();
     int count();
 
-    User findByEmail(String email);
+     User findByEmail(String email);
 }

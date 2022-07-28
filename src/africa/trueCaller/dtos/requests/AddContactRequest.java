@@ -1,15 +1,11 @@
-package africa.trueCaller.data.models;
+package africa.trueCaller.dtos.requests;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class User {
+public class AddContactRequest {
     private String firstName;
     private String lastName;
     private String phoneNumber;
-    private String email;
-    private String password;
-    private List<Contact> contacts=new ArrayList<>();
+    private String email ;
+    private String userEmail;
 
     public String getFirstName() {
         return firstName;
@@ -43,24 +39,11 @@ public class User {
         this.email = email;
     }
 
-    public String getPassword() {
-        return password;
+    public void setUserEmail(String userEmail) {
+        this.userEmail=userEmail;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public List<Contact> getContacts() {
-        return contacts;
-    }
-
-    public String toString(){
-        return String.format("""
-                First Name: %s
-                Last Name: %s
-                Phone Number: %s
-                Email: %s
-                """,firstName,lastName,phoneNumber,email);
+    public String getUserEmail() {
+        return userEmail;
     }
 }

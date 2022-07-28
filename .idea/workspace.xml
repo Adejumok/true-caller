@@ -4,28 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77d5573a-f424-455d-b6f3-0df2ca884f0d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/africa/trueCaller/data/models/Contact.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/africa/trueCaller/data/models/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/africa/trueCaller/data/repositories/ContactRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/africa/trueCaller/data/repositories/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/africa/trueCaller/data/repositories/iContactRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/africa/trueCaller/data/repositories/iUserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/africa/trueCaller/dtos/requests/RegisterRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/africa/trueCaller/dtos/responses/RegisterResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/africa/trueCaller/exceptions/UserExistsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/africa/trueCaller/services/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/africa/trueCaller/services/iUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/africa/trueCaller/data/repositories/ContactRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/africa/trueCaller/data/repositories/UserRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/africa/trueCaller/services/UserServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/true_caller.iml" afterDir="false" />
+    <list default="true" id="77d5573a-f424-455d-b6f3-0df2ca884f0d" name="Changes" comment="Updated TrueCaller">
+      <change afterPath="$PROJECT_DIR$/src/africa/trueCaller/dtos/requests/AddContactRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/africa/trueCaller/dtos/responses/AddContactResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/africa/trueCaller/services/ContactService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/africa/trueCaller/services/IContactService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/africa/trueCaller/utils/Mapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/africa/trueCaller/services/ContactServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/africa/trueCaller/data/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/trueCaller/data/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/africa/trueCaller/data/repositories/IUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/trueCaller/data/repositories/IUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/africa/trueCaller/dtos/requests/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/trueCaller/dtos/requests/RegisterRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/africa/trueCaller/services/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/trueCaller/services/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/africa/trueCaller/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/trueCaller/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/africa/trueCaller/data/repositories/UserRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/africa/trueCaller/data/repositories/UserRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/africa/trueCaller/services/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/africa/trueCaller/services/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +29,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -76,6 +69,9 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="africa.trueCaller.services" />
+      <recent name="africa.trueCaller.dtos" />
+      <recent name="africa.trueCaller.d" />
       <recent name="africa.trueCaller.exceptions" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -83,10 +79,11 @@
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="africa.trueCaller.services" />
+      <recent name="africa.trueCaller.utils" />
       <recent name="africa.trueCaller.data.repositories" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserServiceTest.registerMoreThanOne_getSizeTest">
+  <component name="RunManager" selected="JUnit.UserServiceTest.addContactTest">
     <configuration name="UserRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="true_caller" />
       <extension name="coverage">
@@ -134,7 +131,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserServiceTest.addContactTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="true_caller" />
       <extension name="coverage">
         <pattern>
@@ -144,7 +141,8 @@
       </extension>
       <option name="PACKAGE_NAME" value="africa.trueCaller.services" />
       <option name="MAIN_CLASS_NAME" value="africa.trueCaller.services.UserServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="addContactTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -167,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserServiceTest.registerMoreThanOne_getSizeTest" />
-        <item itemvalue="JUnit.UserRepositoryTest.findAllUsersTest" />
+        <item itemvalue="JUnit.UserServiceTest.addContactTest" />
         <item itemvalue="JUnit.UserRepositoryTest" />
+        <item itemvalue="JUnit.UserRepositoryTest.findAllUsersTest" />
+        <item itemvalue="JUnit.UserServiceTest.registerMoreThanOne_getSizeTest" />
         <item itemvalue="JUnit.UserRepositoryTest.saveUser_removeUserByIdTest" />
-        <item itemvalue="JUnit.UserServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -194,8 +192,17 @@
       <workItem from="1658600326582" duration="5079000" />
       <workItem from="1658619933925" duration="594000" />
       <workItem from="1658698437882" duration="867000" />
-      <workItem from="1658833958365" duration="675000" />
+      <workItem from="1658833958365" duration="16981000" />
+      <workItem from="1658994850511" duration="7662000" />
     </task>
+    <task id="LOCAL-00001" summary="Updated TrueCaller">
+      <created>1658921237667</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1658921237667</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,5 +218,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Updated TrueCaller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated TrueCaller" />
   </component>
 </project>
