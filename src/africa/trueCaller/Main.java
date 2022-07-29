@@ -12,7 +12,6 @@ import java.util.Scanner;
 @SpringBootApplication
 public class Main {
     private static UserController userController=new UserController();
-    private static ArrayList<Contact> contacts=new ArrayList<>();
     private static final Scanner scanner=new Scanner(System.in);
     public static void main(String[] args) {
         //prompt user with menu
@@ -22,7 +21,7 @@ public class Main {
     }
 
     private static void findContactBelongingToUser() {
-        var contacts=userController.contacts(input("Enter your email: "));
+        var contacts=userController.contacts(scanner("Enter your email: "));
         contacts.forEach(contact -> display(contact.toString()));
         displayMainManu();
 
@@ -30,11 +29,11 @@ public class Main {
 
     private static void addContactToUser() {
         AddContactRequest contactRequest=new AddContactRequest();
-        contactRequest.setFirstName(input("Enter contact's first name: "));
-        contactRequest.setLastName(input("Enter contact's last name: "));
-        contactRequest.setPhoneNumber(input("Enter contact's phone number: "));
-        contactRequest.setEmail(input("Enter contact's email: "));
-        contactRequest.setUserEmail("Enter your email: ");
+        contactRequest.setFirstName(scanner("Enter contact's first name: "));
+        contactRequest.setLastName(scanner("Enter contact's last name: "));
+        contactRequest.setPhoneNumber(scanner("Enter contact's phone number: "));
+        contactRequest.setEmail(scanner("Enter contact's email: "));
+        contactRequest.setUserEmail(scanner("Enter your email: "));
         userController.addContact(contactRequest);
         displayMainManu();
     }
@@ -47,7 +46,7 @@ public class Main {
                 3 -> Find Contact Belonging to User
                 """;
         System.out.println(mainMenuPrompt);
-        String userInput=scanner.nextLine();
+        String userInput=scanner(mainMenuPrompt);
 
         switch (userInput.charAt(0)){
             case '1'->createAccount();
@@ -58,11 +57,11 @@ public class Main {
 
     private static void createAccount(){
         RegisterRequest request=new RegisterRequest();
-        request.setFirstName(input("Enter first name: "));
-        request.setLastName(input("Enter last name: "));
-        request.setPhoneNumber(input("Enter phone number: "));
-        request.setPassword(input("Enter password: "));
-        request.setEmail(input("Enter email: "));
+        request.setFirstName(scanner("Enter first name: "));
+        request.setLastName(scanner("Enter last name: "));
+        request.setPhoneNumber(scanner("Enter phone number: "));
+        request.setPassword(scanner("Enter password: "));
+        request.setEmail(scanner("Enter email: "));
         userController.registerUser(request);
         display("Done!");
         displayMainManu();
@@ -73,7 +72,7 @@ public class Main {
     }
 
 
-    public static String input(String prompt){
+    public static String scanner(String prompt){
         System.out.println(prompt);
         return scanner.nextLine();
     }
