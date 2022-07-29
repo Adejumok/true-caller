@@ -5,13 +5,15 @@ import africa.trueCaller.data.repositories.ContactRepository;
 
 public class ContactService implements IContactService {
 
-    private ContactRepository contactRepository;
+    ContactRepository contactRepository=new ContactRepository();
 
-    public ContactService contactService(){
-        return null;
-    }
     @Override
     public Contact addNewContact(Contact contact) {
-        return null;
+        return contactRepository.save(contact);
+    }
+
+    @Override
+    public int size() {
+        return contactRepository.count();
     }
 }

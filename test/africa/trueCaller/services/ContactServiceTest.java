@@ -1,6 +1,7 @@
 package africa.trueCaller.services;
 
 import africa.trueCaller.data.models.Contact;
+import africa.trueCaller.data.repositories.ContactRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -8,10 +9,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ContactServiceTest {
     private IContactService contactService;
+    private ContactRepository contactRepository;
 
     @BeforeEach
     public void setUp(){
-
+        contactRepository=new ContactRepository();
         contactService=new ContactService();
     }
 

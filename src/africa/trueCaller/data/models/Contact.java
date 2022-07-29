@@ -50,10 +50,11 @@ public class Contact {
 
     public String toString(){
         return String.format("""
+                ID: %d
                 First Name: %s
                 Last Name: %s
                 Phone Number: %s
                 Email: %s
-                """,firstName,lastName,phoneNumber,email);
+                """,id,firstName,lastName,phoneNumber,email);
     }
 }

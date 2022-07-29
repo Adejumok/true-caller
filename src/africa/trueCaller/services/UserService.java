@@ -2,7 +2,9 @@ package africa.trueCaller.services;
 
 import africa.trueCaller.data.models.Contact;
 import africa.trueCaller.data.models.User;
+import africa.trueCaller.data.repositories.ContactRepository;
 import africa.trueCaller.data.repositories.IUserRepository;
+import africa.trueCaller.data.repositories.UserRepository;
 import africa.trueCaller.dtos.requests.AddContactRequest;
 import africa.trueCaller.dtos.requests.RegisterRequest;
 import africa.trueCaller.dtos.responses.AddContactResponse;
@@ -19,6 +21,13 @@ public class UserService implements IUserService {
     public UserService(IUserRepository userRepository, IContactService contactService){
         this.userRepository=userRepository;
         this.contactService=contactService;
+    }
+
+    public UserService(){
+        this.userRepository=new UserRepository();
+        ContactRepository contactRepository=new ContactRepository();
+        this.contactService=new ContactService();
+
     }
 
     @Override
