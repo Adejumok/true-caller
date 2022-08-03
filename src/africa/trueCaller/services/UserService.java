@@ -9,13 +9,11 @@ import africa.trueCaller.dtos.requests.AddContactRequest;
 import africa.trueCaller.dtos.requests.RegisterRequest;
 import africa.trueCaller.dtos.requests.UpdateContactRequest;
 import africa.trueCaller.dtos.requests.UpdateUserRequest;
-import africa.trueCaller.dtos.responses.AddContactResponse;
-import africa.trueCaller.dtos.responses.RegisterResponse;
-import africa.trueCaller.dtos.responses.UpdateContactResponse;
-import africa.trueCaller.dtos.responses.UpdateUserResponse;
+import africa.trueCaller.dtos.responses.*;
 import africa.trueCaller.exceptions.UserExistsException;
 import africa.trueCaller.utils.Mapper;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class UserService implements IUserService {
@@ -44,7 +42,7 @@ public class UserService implements IUserService {
 
         userRepository.save(user);
         RegisterResponse response= new RegisterResponse();
-        response.setMessage("Congratulations!!!");
+        response.setMessage(String.format("%s registered successfully", request.getEmail()));
         return response;
     }
 
@@ -69,19 +67,17 @@ public class UserService implements IUserService {
         //1.
         Contact contact=new Contact();
         Mapper.map(addRequest,contact);
-
         //2.
         Contact savedContact=contactService.addNewContact(contact);
-
         //3.
         User user=userRepository.findByEmail(addRequest.getUserEmail());
-
         //4.
         user.getContacts().add(savedContact);
-
         //5.
         userRepository.save(user);
-        return null;
+        AddContactResponse response= new AddContactResponse();
+        response.setMessage(String.format("%s registered successfully", addRequest.getEmail()));
+        return response;
     }
 
     @Override
@@ -115,9 +111,16 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public List<Contact> findContactsBelongingTo(String userEmail) {
+    public List<AllContactResponse> findContactsBelongingTo(String userEmail) {
         User user=userRepository.findByEmail(userEmail);
-        return user.getContacts();
+        List<Contact> allUserContacts = user.getContacts();
+        List<AllContactResponse> response=new ArrayList<>();
+        allUserContacts.forEach(contact ->{
+            AllContactResponse singleResponse=new AllContactResponse();
+            Mapper.map(contact,singleResponse);
+            response.add(singleResponse);
+        });
+        return response;
     }
 
     @Override

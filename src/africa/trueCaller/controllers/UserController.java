@@ -4,6 +4,7 @@ import africa.trueCaller.data.models.Contact;
 import africa.trueCaller.dtos.requests.AddContactRequest;
 import africa.trueCaller.dtos.requests.RegisterRequest;
 import africa.trueCaller.dtos.responses.AddContactResponse;
+import africa.trueCaller.dtos.responses.AllContactResponse;
 import africa.trueCaller.dtos.responses.RegisterResponse;
 import africa.trueCaller.services.IUserService;
 import africa.trueCaller.services.UserService;
@@ -23,7 +24,7 @@ public class UserController {
         return userService.addContactResponse(addContactRequest);
     }
     @GetMapping("/user/{email}")
-    public List<Contact> contacts(@PathVariable String email){
+    public List<AllContactResponse> contacts(@PathVariable String email){
         return userService.findContactsBelongingTo(email);
     }
 }

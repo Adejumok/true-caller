@@ -5,6 +5,7 @@ import africa.trueCaller.data.models.User;
 import africa.trueCaller.dtos.requests.AddContactRequest;
 import africa.trueCaller.dtos.requests.RegisterRequest;
 import africa.trueCaller.dtos.requests.UpdateUserRequest;
+import africa.trueCaller.dtos.responses.AllContactResponse;
 
 public class Mapper {
     public static void map(RegisterRequest request, User user) {
@@ -20,4 +21,9 @@ public class Mapper {
         contact.setPhoneNumber(addRequest.getPhoneNumber());
         contact.setEmail(addRequest.getEmail());}
 
+    public static void map(Contact contact, AllContactResponse singleResponse) {
+        singleResponse.setId(contact.getId()+"");
+        singleResponse.setLastName(contact.getLastName());
+        singleResponse.setFirstName(contact.getFirstName());
+    }
 }
