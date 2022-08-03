@@ -6,8 +6,11 @@ import africa.trueCaller.dtos.requests.RegisterRequest;
 import africa.trueCaller.dtos.responses.AddContactResponse;
 import africa.trueCaller.dtos.responses.AllContactResponse;
 import africa.trueCaller.dtos.responses.RegisterResponse;
+import africa.trueCaller.exceptions.UserExistsException;
 import africa.trueCaller.services.IUserService;
 import africa.trueCaller.services.UserService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,8 +19,14 @@ import java.util.List;
 public class UserController {
     private IUserService userService=new UserService();
     @PostMapping("/user")
-    public RegisterResponse registerUser(@RequestBody RegisterRequest registerRequest){
-        return userService.register(registerRequest);
+    public ResponseEntity<?> registerUser(@RequestBody RegisterRequest registerRequest){
+        try {
+            RegisterResponse serviceResponse = userService.register(registerRequest);
+            return new ResponseEntity<>(serviceResponse, HttpStatus.CREATED);
+        }
+        catch (UserExistsException ex){
+            return new ResponseEntity<>(ex.getMessage(),HttpStatus.BAD_REQUEST);
+        }
     }
     @PatchMapping("/user")
     public AddContactResponse addContact(@RequestBody AddContactRequest addContactRequest){

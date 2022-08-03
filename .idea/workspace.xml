@@ -5,14 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77d5573a-f424-455d-b6f3-0df2ca884f0d" name="Changes" comment="Updated TrueCaller">
-      <change afterPath="$PROJECT_DIR$/src/africa/trueCaller/dtos/responses/AllContactResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xlm" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xlm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/africa/trueCaller/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/trueCaller/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/africa/trueCaller/dtos/responses/AddContactResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/trueCaller/dtos/responses/AddContactResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/africa/trueCaller/dtos/responses/RegisterResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/trueCaller/dtos/responses/RegisterResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/africa/trueCaller/services/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/trueCaller/services/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/africa/trueCaller/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/trueCaller/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/africa/trueCaller/utils/Mapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/trueCaller/utils/Mapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/africa/trueCaller/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/africa/trueCaller/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/controllers/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/africa/trueCaller/dtos/responses/AddContactResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/dtos/responses/AddContactResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/africa/trueCaller/dtos/responses/RegisterResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/dtos/responses/RegisterResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/africa/trueCaller/services/IUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/services/IUserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/africa/trueCaller/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/services/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/africa/trueCaller/utils/Mapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/utils/Mapper.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +92,7 @@
       <recent name="africa.trueCaller.data.repositories" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserServiceTest.userDeleteContactTest">
+  <component name="RunManager" selected="Spring Boot.Main">
     <configuration name="UserServiceTest.addContactTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="true_caller" />
       <extension name="coverage">
@@ -170,10 +172,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.Main" />
         <item itemvalue="JUnit.UserServiceTest.userDeleteContactTest" />
         <item itemvalue="JUnit.UserServiceTest.userUpdateContactTest" />
         <item itemvalue="JUnit.UserServiceTest.updateUserTest" />
-        <item itemvalue="Spring Boot.Main" />
         <item itemvalue="JUnit.UserServiceTest.addContactTest" />
       </list>
     </recent_temporary>
@@ -205,7 +207,7 @@
       <workItem from="1659384078870" duration="9763000" />
       <workItem from="1659446197131" duration="748000" />
       <workItem from="1659474113709" duration="3125000" />
-      <workItem from="1659519079388" duration="5562000" />
+      <workItem from="1659519079388" duration="13900000" />
     </task>
     <task id="LOCAL-00001" summary="Updated TrueCaller">
       <created>1658921237667</created>
@@ -242,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659519127210</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Updated TrueCaller">
+      <created>1659525026410</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1659525026410</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
