@@ -9,6 +9,7 @@ import africa.trueCaller.dtos.responses.RegisterResponse;
 import africa.trueCaller.exceptions.UserExistsException;
 import africa.trueCaller.services.IUserService;
 import africa.trueCaller.services.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
@@ -17,7 +18,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 @RestController
 public class UserController {
-    private IUserService userService=new UserService();
+    @Autowired
+    private IUserService userService;
     @PostMapping("/user")
     public ResponseEntity<?> registerUser(@RequestBody RegisterRequest registerRequest){
         try {

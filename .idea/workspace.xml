@@ -5,16 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77d5573a-f424-455d-b6f3-0df2ca884f0d" name="Changes" comment="Updated TrueCaller">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_bson_4_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_bson_record_codec_4_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_core_4_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_sync_4_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_mongodb_2_7_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_7_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_mongodb_3_4_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_3_22.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xlm" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xlm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/africa/trueCaller/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/trueCaller/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/africa/trueCaller/data/models/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/trueCaller/data/models/Contact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/africa/trueCaller/data/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/trueCaller/data/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/africa/trueCaller/data/repositories/ContactRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/africa/trueCaller/data/repositories/IContactRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/trueCaller/data/repositories/IContactRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/africa/trueCaller/data/repositories/IUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/trueCaller/data/repositories/IUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/africa/trueCaller/data/repositories/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/africa/trueCaller/services/ContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/trueCaller/services/ContactService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/africa/trueCaller/services/IContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/trueCaller/services/IContactService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/africa/trueCaller/services/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/trueCaller/services/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/africa/trueCaller/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/trueCaller/services/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/africa/trueCaller/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/africa/trueCaller/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/controllers/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/africa/trueCaller/dtos/responses/AddContactResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/dtos/responses/AddContactResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/africa/trueCaller/dtos/responses/RegisterResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/dtos/responses/RegisterResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/africa/trueCaller/services/ContactService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/services/ContactService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/africa/trueCaller/services/IContactService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/services/IContactService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/africa/trueCaller/services/IUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/services/IUserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/africa/trueCaller/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/services/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/africa/trueCaller/utils/Mapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/utils/Mapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/africa/trueCaller/services/ContactServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/africa/trueCaller/services/ContactServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/africa/trueCaller/services/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/africa/trueCaller/services/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,31 +69,32 @@
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;1475b28f2c92c6c53c32980c54932eca&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "true",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "full.screen.before.presentation.mode": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "1475b28f2c92c6c53c32980c54932eca"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="africa.trueCaller.dtos" />
@@ -207,7 +227,7 @@
       <workItem from="1659384078870" duration="9763000" />
       <workItem from="1659446197131" duration="748000" />
       <workItem from="1659474113709" duration="3125000" />
-      <workItem from="1659519079388" duration="13900000" />
+      <workItem from="1659519079388" duration="21330000" />
     </task>
     <task id="LOCAL-00001" summary="Updated TrueCaller">
       <created>1658921237667</created>
@@ -251,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659525026410</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Updated TrueCaller">
+      <created>1659535204613</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1659535204613</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

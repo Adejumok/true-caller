@@ -1,10 +1,7 @@
 package africa.trueCaller.services;
 
-import africa.trueCaller.data.models.Contact;
 import africa.trueCaller.data.models.User;
-import africa.trueCaller.data.repositories.ContactRepository;
 import africa.trueCaller.data.repositories.IUserRepository;
-import africa.trueCaller.data.repositories.UserRepository;
 import africa.trueCaller.dtos.requests.AddContactRequest;
 import africa.trueCaller.dtos.requests.RegisterRequest;
 import africa.trueCaller.dtos.requests.UpdateContactRequest;

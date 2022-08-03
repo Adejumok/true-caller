@@ -17,8 +17,6 @@ public interface IUserService {
     AddContactResponse addContactResponse(AddContactRequest addRequest);
     UpdateUserResponse updateUser(String email,UpdateUserRequest request);
 
-    int getNumberOfUsers();
-
     List<AllContactResponse> findContactsBelongingTo(String userEmail);
 
     UpdateContactResponse updateContact(String userEmail, String contactEmail, UpdateContactRequest updateContactRequest);

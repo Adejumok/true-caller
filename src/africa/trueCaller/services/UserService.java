@@ -2,9 +2,7 @@ package africa.trueCaller.services;
 
 import africa.trueCaller.data.models.Contact;
 import africa.trueCaller.data.models.User;
-import africa.trueCaller.data.repositories.ContactRepository;
 import africa.trueCaller.data.repositories.IUserRepository;
-import africa.trueCaller.data.repositories.UserRepository;
 import africa.trueCaller.dtos.requests.AddContactRequest;
 import africa.trueCaller.dtos.requests.RegisterRequest;
 import africa.trueCaller.dtos.requests.UpdateContactRequest;
@@ -12,24 +10,21 @@ import africa.trueCaller.dtos.requests.UpdateUserRequest;
 import africa.trueCaller.dtos.responses.*;
 import africa.trueCaller.exceptions.UserExistsException;
 import africa.trueCaller.utils.Mapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Service
 public class UserService implements IUserService {
-    private final IUserRepository userRepository;
-    private final IContactService contactService;
+    @Autowired
+    private IUserRepository userRepository;
+    @Autowired
+    private IContactService contactService;
 
     public UserService(IUserRepository userRepository, IContactService contactService){
         this.userRepository=userRepository;
         this.contactService=contactService;
-    }
-
-    public UserService(){
-        this.userRepository=new UserRepository();
-        ContactRepository contactRepository=new ContactRepository();
-        this.contactService=new ContactService();
-
     }
 
     @Override
@@ -47,12 +42,12 @@ public class UserService implements IUserService {
     }
 
     private void isExist(String email) {
-        User savedUser= userRepository.findByEmail(email);
+        User savedUser= userRepository.findUserByEmail(email);
         if(savedUser!=null)throw new UserExistsException(email+" already exist.");
     }
 
     public User findUser(String userEmail){
-        User foundUser = userRepository.findByEmail(userEmail);
+        User foundUser = userRepository.findUserByEmail(userEmail);
         if(foundUser==null){throw new RuntimeException("User not found!");}
         return foundUser;
     }
@@ -70,7 +65,7 @@ public class UserService implements IUserService {
         //2.
         Contact savedContact=contactService.addNewContact(contact);
         //3.
-        User user=userRepository.findByEmail(addRequest.getUserEmail());
+        User user=userRepository.findUserByEmail(addRequest.getUserEmail());
         //4.
         user.getContacts().add(savedContact);
         //5.
@@ -106,13 +101,8 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public int getNumberOfUsers() {
-        return userRepository.count();
-    }
-
-    @Override
     public List<AllContactResponse> findContactsBelongingTo(String userEmail) {
-        User user=userRepository.findByEmail(userEmail);
+        User user=userRepository.findUserByEmail(userEmail);
         List<Contact> allUserContacts = user.getContacts();
         List<AllContactResponse> response=new ArrayList<>();
         allUserContacts.forEach(contact ->{
