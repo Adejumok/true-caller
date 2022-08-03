@@ -4,6 +4,7 @@ import africa.trueCaller.data.models.Contact;
 import africa.trueCaller.data.models.User;
 import africa.trueCaller.dtos.requests.AddContactRequest;
 import africa.trueCaller.dtos.requests.RegisterRequest;
+import africa.trueCaller.dtos.requests.UpdateUserRequest;
 
 public class Mapper {
     public static void map(RegisterRequest request, User user) {

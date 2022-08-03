@@ -1,10 +1,14 @@
 package africa.trueCaller.services;
 
+import africa.trueCaller.data.models.Contact;
+import africa.trueCaller.data.models.User;
 import africa.trueCaller.data.repositories.ContactRepository;
 import africa.trueCaller.data.repositories.IUserRepository;
 import africa.trueCaller.data.repositories.UserRepository;
 import africa.trueCaller.dtos.requests.AddContactRequest;
 import africa.trueCaller.dtos.requests.RegisterRequest;
+import africa.trueCaller.dtos.requests.UpdateContactRequest;
+import africa.trueCaller.dtos.requests.UpdateUserRequest;
 import africa.trueCaller.exceptions.UserExistsException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -102,5 +106,84 @@ class UserServiceTest {
         userService.addContactResponse(addContactRequest);
 
         assertEquals(1,userService.findContactsBelongingTo("ki@gmail.com").size());
+    }
+
+    @Test
+    public void updateUserTest() {
+        //given
+        //I register
+        RegisterRequest request = new RegisterRequest();
+        request.setPassword("0998");
+        request.setFirstName("Lois");
+        request.setLastName("Jummy");
+        request.setPhoneNumber("0909090988");
+        request.setEmail("ki@gmail.com");
+
+        userService.register(request);
+
+        UpdateUserRequest updateUserRequest = new UpdateUserRequest();
+        updateUserRequest.setPassword(" ");
+        updateUserRequest.setFirstName("Lois");
+        updateUserRequest.setLastName("Adewale");
+        updateUserRequest.setPhoneNumber("0909090988");
+        updateUserRequest.setEmail("koko@gmail.com");
+
+        userService.updateUser("ki@gmail.com",updateUserRequest);
+        User user = userRepository.findByEmail("koko@gmail.com");
+        assertEquals("Adewale",user.getLastName());
+
+    }
+
+    @Test
+    void userUpdateContactTest(){
+        RegisterRequest request=new RegisterRequest();
+        request.setPassword("0998");
+        request.setFirstName("Lois");
+        request.setPhoneNumber("0909090988");
+        request.setEmail("ki@gmail.com");
+        userService.register(request);
+
+        AddContactRequest addContactRequest=new AddContactRequest();
+        addContactRequest.setUserEmail("ki@gmail.com");
+        addContactRequest.setFirstName("Lois");
+        addContactRequest.setPhoneNumber("0909090988");
+        addContactRequest.setEmail("me@gmail.com");
+        userService.addContactResponse(addContactRequest);
+
+        assertEquals(1,userService.findContactsBelongingTo("ki@gmail.com").size());
+        assertEquals("0909090988",userService.findContactsBelongingTo("ki@gmail.com").get(0).getPhoneNumber());
+
+
+        UpdateContactRequest updateContactRequest=new UpdateContactRequest();
+        updateContactRequest.setFirstName("Lade");
+        updateContactRequest.setLastName("Awe");
+        updateContactRequest.setPhoneNumber("009-987-987-66");
+        updateContactRequest.setEmail("ui@gmail.com");
+        updateContactRequest.setUserEmail("ki@gmail.com");
+        userService.updateContact("ki@gmail.com","me@gmail.com",updateContactRequest);
+
+        assertEquals("009-987-987-66",userService.findContactsBelongingTo("ki@gmail.com").get(0).getPhoneNumber());
+    }
+
+    @Test
+    void userDeleteContactTest() {
+        RegisterRequest request = new RegisterRequest();
+        request.setPassword("0998");
+        request.setFirstName("Lois");
+        request.setPhoneNumber("0909090988");
+        request.setEmail("ki@gmail.com");
+        userService.register(request);
+
+        AddContactRequest addContactRequest = new AddContactRequest();
+        addContactRequest.setUserEmail("ki@gmail.com");
+        addContactRequest.setFirstName("Lois");
+        addContactRequest.setPhoneNumber("0909090988");
+        addContactRequest.setEmail("me@gmail.com");
+        userService.addContactResponse(addContactRequest);
+
+        assertEquals(1, userService.findContactsBelongingTo("ki@gmail.com").size());
+
+        userService.deleteContact("ki@gmail.com","me@gmail.com");
+        assertEquals(0,userService.findContactsBelongingTo("ki@gmail.com").size());
     }
 }

@@ -5,30 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77d5573a-f424-455d-b6f3-0df2ca884f0d" name="Changes" comment="Updated TrueCaller">
-      <change afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/controllers/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/data/models/Contact.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/data/models/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/data/repositories/ContactRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/data/repositories/IContactRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/data/repositories/IUserRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/data/repositories/UserRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/dtos/requests/AddContactRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/dtos/requests/RegisterRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/dtos/responses/AddContactResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/dtos/responses/RegisterResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/exceptions/UserExistsException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/services/ContactService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/services/IContactService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/services/IUserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/services/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/utils/Mapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/africa/trueCaller/dtos/requests/UpdateContactRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/africa/trueCaller/dtos/requests/UpdateUserRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/africa/trueCaller/dtos/responses/UpdateContactResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/africa/trueCaller/dtos/responses/UpdateUserResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/africa/trueCaller/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/trueCaller/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/africa/trueCaller/data/models/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/trueCaller/data/models/Contact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/africa/trueCaller/data/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/trueCaller/data/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/africa/trueCaller/dtos/requests/AddContactRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/trueCaller/dtos/requests/AddContactRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/africa/trueCaller/dtos/requests/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/trueCaller/dtos/requests/RegisterRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/africa/trueCaller/services/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/trueCaller/services/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/africa/trueCaller/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/trueCaller/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/africa/trueCaller/utils/Mapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/trueCaller/utils/Mapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/africa/trueCaller/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/africa/trueCaller/services/IUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/services/IUserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/africa/trueCaller/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/services/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/africa/trueCaller/utils/Mapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/africa/trueCaller/utils/Mapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/africa/trueCaller/services/ContactServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/africa/trueCaller/services/ContactServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/africa/trueCaller/services/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/africa/trueCaller/services/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,34 +55,36 @@
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "true",
-    "Repository.Attach.JavaDocs": "true",
-    "Repository.Attach.Sources": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "full.screen.before.presentation.mode": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;1475b28f2c92c6c53c32980c54932eca&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="africa.trueCaller.services" />
       <recent name="africa.trueCaller.dtos" />
+      <recent name="africa.trueCaller.dtos.requests" />
+      <recent name="africa.trueCaller.services" />
       <recent name="africa.trueCaller.d" />
       <recent name="africa.trueCaller.exceptions" />
     </key>
@@ -104,38 +97,7 @@
       <recent name="africa.trueCaller.data.repositories" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Main">
-    <configuration name="UserRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="true_caller" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="africa.trueCaller.data.repositories.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="africa.trueCaller.data.repositories" />
-      <option name="MAIN_CLASS_NAME" value="africa.trueCaller.data.repositories.UserRepositoryTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserRepositoryTest.findAllUsersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="true_caller" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="africa.trueCaller.data.repositories.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="africa.trueCaller.data.repositories" />
-      <option name="MAIN_CLASS_NAME" value="africa.trueCaller.data.repositories.UserRepositoryTest" />
-      <option name="METHOD_NAME" value="findAllUsersTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.UserServiceTest.userDeleteContactTest">
     <configuration name="UserServiceTest.addContactTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="true_caller" />
       <extension name="coverage">
@@ -152,7 +114,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceTest.registerMoreThanOne_getSizeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserServiceTest.updateUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="true_caller" />
       <extension name="coverage">
         <pattern>
@@ -162,7 +124,39 @@
       </extension>
       <option name="PACKAGE_NAME" value="africa.trueCaller.services" />
       <option name="MAIN_CLASS_NAME" value="africa.trueCaller.services.UserServiceTest" />
-      <option name="METHOD_NAME" value="registerMoreThanOne_getSizeTest" />
+      <option name="METHOD_NAME" value="updateUserTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.userDeleteContactTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="true_caller" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="africa.trueCaller.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="africa.trueCaller.services" />
+      <option name="MAIN_CLASS_NAME" value="africa.trueCaller.services.UserServiceTest" />
+      <option name="METHOD_NAME" value="userDeleteContactTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.userUpdateContactTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="true_caller" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="africa.trueCaller.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="africa.trueCaller.services" />
+      <option name="MAIN_CLASS_NAME" value="africa.trueCaller.services.UserServiceTest" />
+      <option name="METHOD_NAME" value="userUpdateContactTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -183,11 +177,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserServiceTest.userDeleteContactTest" />
+        <item itemvalue="JUnit.UserServiceTest.userUpdateContactTest" />
+        <item itemvalue="JUnit.UserServiceTest.updateUserTest" />
         <item itemvalue="Spring Boot.Main" />
         <item itemvalue="JUnit.UserServiceTest.addContactTest" />
-        <item itemvalue="JUnit.UserRepositoryTest" />
-        <item itemvalue="JUnit.UserRepositoryTest.findAllUsersTest" />
-        <item itemvalue="JUnit.UserServiceTest.registerMoreThanOne_getSizeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -212,7 +206,12 @@
       <workItem from="1658698437882" duration="867000" />
       <workItem from="1658833958365" duration="16981000" />
       <workItem from="1658994850511" duration="19141000" />
-      <workItem from="1659082452825" duration="13130000" />
+      <workItem from="1659082452825" duration="13742000" />
+      <workItem from="1659136694272" duration="92000" />
+      <workItem from="1659342508676" duration="937000" />
+      <workItem from="1659384078870" duration="9763000" />
+      <workItem from="1659446197131" duration="748000" />
+      <workItem from="1659474113709" duration="3125000" />
     </task>
     <task id="LOCAL-00001" summary="Updated TrueCaller">
       <created>1658921237667</created>
@@ -235,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659095773268</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Updated TrueCaller">
+      <created>1659112513662</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1659112513662</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -7,8 +7,12 @@ import africa.trueCaller.data.repositories.IUserRepository;
 import africa.trueCaller.data.repositories.UserRepository;
 import africa.trueCaller.dtos.requests.AddContactRequest;
 import africa.trueCaller.dtos.requests.RegisterRequest;
+import africa.trueCaller.dtos.requests.UpdateContactRequest;
+import africa.trueCaller.dtos.requests.UpdateUserRequest;
 import africa.trueCaller.dtos.responses.AddContactResponse;
 import africa.trueCaller.dtos.responses.RegisterResponse;
+import africa.trueCaller.dtos.responses.UpdateContactResponse;
+import africa.trueCaller.dtos.responses.UpdateUserResponse;
 import africa.trueCaller.exceptions.UserExistsException;
 import africa.trueCaller.utils.Mapper;
 
@@ -49,6 +53,11 @@ public class UserService implements IUserService {
         if(savedUser!=null)throw new UserExistsException(email+" already exist.");
     }
 
+    public User findUser(String userEmail){
+        User foundUser = userRepository.findByEmail(userEmail);
+        if(foundUser==null){throw new RuntimeException("User not found!");}
+        return foundUser;
+    }
     @Override
     public AddContactResponse addContactResponse(AddContactRequest addRequest) {
         //1->create a contact
@@ -76,6 +85,31 @@ public class UserService implements IUserService {
     }
 
     @Override
+    public UpdateUserResponse updateUser(String email, UpdateUserRequest request) {
+        User foundUser = findUser(email);
+        if(!request.getFirstName().equals(" ") && request.getFirstName()!= null){
+            foundUser.setFirstName(request.getFirstName());
+        }
+        if(!request.getLastName().equals(" ") && request.getLastName()!= null){
+            foundUser.setLastName(request.getLastName());
+        }
+        if(!request.getPhoneNumber().equals(" ") && request.getPhoneNumber()!= null){
+            foundUser.setPhoneNumber(request.getPhoneNumber());
+        }
+        if(!request.getEmail().equals(" ") && request.getEmail()!= null){
+            foundUser.setEmail(request.getEmail());
+        }
+        if(!request.getPassword().equals(" ") && request.getPassword()!= null){
+            foundUser.setPassword(request.getPassword());
+        }
+        userRepository.save(foundUser);
+        UpdateUserResponse updateUserResponse = new UpdateUserResponse();
+        updateUserResponse.setMessage("Successfully updated");
+        return updateUserResponse;
+
+    }
+
+    @Override
     public int getNumberOfUsers() {
         return userRepository.count();
     }
@@ -84,5 +118,53 @@ public class UserService implements IUserService {
     public List<Contact> findContactsBelongingTo(String userEmail) {
         User user=userRepository.findByEmail(userEmail);
         return user.getContacts();
+    }
+
+    @Override
+    public UpdateContactResponse updateContact(String userEmail, String contactEmail, UpdateContactRequest updateContactRequest) {
+        User user = findUser(userEmail);
+
+        Contact contact= findContactByEmail(userEmail,contactEmail);
+        user.getContacts().remove(contact);
+
+        if(!updateContactRequest.getFirstName().equals("") && updateContactRequest.getFirstName()!= null){
+            contact.setFirstName(updateContactRequest.getFirstName());
+        }
+        if(!updateContactRequest.getLastName().equals("") && updateContactRequest.getLastName()!= null){
+            contact.setLastName(updateContactRequest.getLastName());
+        }
+        if(!updateContactRequest.getPhoneNumber().equals("") && updateContactRequest.getPhoneNumber()!= null){
+            contact.setPhoneNumber(updateContactRequest.getPhoneNumber());
+        }
+        if(!updateContactRequest.getEmail().equals("") && updateContactRequest.getEmail()!= null){
+            contact.setEmail(updateContactRequest.getEmail());
+        }
+
+        contactService.addNewContact(contact);
+        user.getContacts().add(contact);
+        userRepository.save(user);
+        UpdateContactResponse updateContactResponse=new UpdateContactResponse();
+        updateContactResponse.setMessage("Contact Successfully Updated");
+        return updateContactResponse;
+    }
+
+
+
+    @Override
+    public Contact findContactByEmail(String userEmail,String contactEmail) {
+        User user=findUser(userEmail);
+        for (Contact contact: user.getContacts()){
+            if (contactEmail.equals(contact.getEmail())){
+                return contact;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public void deleteContact(String userEmail, String contactEmail) {
+        User user = findUser(userEmail);
+        Contact contact= findContactByEmail(userEmail,contactEmail);
+        user.getContacts().remove(contact);
     }
 }
